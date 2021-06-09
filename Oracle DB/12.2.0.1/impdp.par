@@ -1,0 +1,6 @@
+schemas=SIEBEL 
+directory=DATA_PUMP_DIR 
+dumpfile=SIEBEL.dmp
+logfile=impdpSIEBEL.log
+TABLE_EXISTS_ACTION=REPLACE
+
