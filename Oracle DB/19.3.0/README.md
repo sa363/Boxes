@@ -1,4 +1,4 @@
-# oracle12c-vagrant
+# oracle-19c-vagrant
 
 This Vagrant project provisions Oracle Database automatically, using Vagrant, an Oracle Linux 7 box and a shell script.
 
@@ -11,7 +11,7 @@ makes configuration much easier
 ## Getting started
 
 1. Clone this repository 
-2. Download the installation zip file (`linuxx64_12201_database.zip`) from OTN into this directory - first time only:
+2. Download the installation zip file (`LINUX.X64_193000_db_home.zip`) from OTN into this directory - first time only:
 [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 3. Run `vagrant up`
    1. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection as the scripts will update the VM to the latest via `yum`.
@@ -66,8 +66,8 @@ Parameters are considered in the following order (first one wins):
 
 ### VM parameters
 
-* `VM_NAME` (default: `oracle-12201-vagrant`): VM name.
-* `VM_MEMORY` (default: `2048`): memory for the VM (in MB, 2048 MB = 2 GB).
+* `VM_NAME` (default: `oracle-19c-vagrant`): VM name.
+* `VM_MEMORY` (default: `2300`): memory for the VM (in MB, 2300 MB is ~2.25 GB).
 * `VM_SYSTEM_TIMEZONE` (default: host time zone (if possible)): VM time zone.
   * The system time zone is used by the database for SYSDATE/SYSTIMESTAMP.
   * The guest time zone will be set to the host time zone when the host time zone is a full hour offset from GMT.
@@ -77,7 +77,7 @@ Parameters are considered in the following order (first one wins):
 ### Oracle Database parameters
 
 * `VM_ORACLE_BASE` (default: `/opt/oracle/`): Oracle base directory.
-* `VM_ORACLE_HOME` (default: `/opt/oracle/product/12.2.0.1/dbhome_1`): Oracle home directory.
+* `VM_ORACLE_HOME` (default: `/opt/oracle/product/19c/dbhome_1`): Oracle home directory.
 * `VM_ORACLE_SID` (default: `ORCLCDB`): Oracle SID.
 * `VM_ORACLE_PDB` (default: `SIEBEL`): PDB name.
 * `VM_ORACLE_CHARACTERSET` (default: `AL32UTF8`): database character set.
